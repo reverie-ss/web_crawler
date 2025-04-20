@@ -1,0 +1,5 @@
+aiohttp
+bs4
+ipykernel
+playwright
+beautifulsoup4
