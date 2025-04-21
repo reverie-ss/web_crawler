@@ -1,0 +1,34 @@
+[
+    {
+        "net_location": "www.nykaafashion.com/",
+        "site_name": "Nykaa Fashion",
+        "crawl_format": "jsonld",
+        "crawl_delay": 5,
+        "crawl_timeout": 30,
+        "pagination": "infinite_scroll"
+    },
+    {
+        "net_location": "www.westside.com/",
+        "site_name": "WestSide",
+        "crawl_format": "html",
+        "crawl_delay": 5,
+        "crawl_timeout": 30,
+        "pagination": "infinite_scroll"
+    },
+    {
+        "net_location": "www.tatacliq.com",
+        "site_name": "Tata Cliq",
+        "crawl_format": "html",
+        "crawl_delay": 5,
+        "crawl_timeout": 30,
+        "pagination": "button"
+    },
+    {
+        "net_location": "www.virgio.com",
+        "site_name": "Virgo",
+        "crawl_format": "html",
+        "crawl_delay": 5,
+        "crawl_timeout": 30,
+        "pagination": "infinite_scroll"
+    }
+]
