@@ -3,3 +3,7 @@ bs4
 ipykernel
 playwright
 beautifulsoup4
+requests
+ultimate-sitemap-parser
+scikit-learn
+pandas
