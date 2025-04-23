@@ -34,8 +34,16 @@ Instead of using a `Rule-based` approach, this project uses machine learning for
 The feature extraction was done using `TF-IDF` as we can generalize the classification by dividing urls into smaller parts and figuring out the frequency.
 Data from 3 different ecommerce websites was labbeled and vectorized to train using `XGBoost`. This produced a model with very accurate results.
 
+# Result
+The model was trained on a labelled dataset of 16000+ URLs.
+The model was then tested with all the URLs from TataCLiq and the results were amazing.
+```
+Scraped URLs from TataCliq: 8,11,745
 
+False Positives: 4
 
+False negatives: 0
+```
 ## Installation
 1. Clone the repository:
     ```bash
