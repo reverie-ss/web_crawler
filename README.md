@@ -34,6 +34,19 @@ Instead of using a `Rule-based` approach, this project uses machine learning for
 The feature extraction was done using `TF-IDF` as we can generalize the classification by dividing urls into smaller parts and figuring out the frequency.
 Data from 3 different ecommerce websites was labbeled and vectorized to train using `XGBoost`. This produced a model with very accurate results.
 
+### Why TF-IDF?
+This method revolves around the frequency and importance of words. 
+
+In the case of URL classification, I noticed a common pattern that all urls have the product name (more like a description) in it. And these descriptions are more or less repetative. 
+
+To support my argument, I did an analysis on a 8lakh+ URLs. here's what I found:
+
+![Frequncy distribution](https://github.com/reverie-ss/web_crawler/blob/main/words-frequency-distribution.png?raw=true)
+
+In the above distribution graph, once can observe the frequency of each word in the URLs. There's bunch of words which are mostly repeated. For example, `shirt`, `cotton`, `white`, `blue`
+
+Thus relying on the frequency made more sense.
+
 ## Crawler Engine
 The Crawler Engine primarily searches for the `sitemap.xml` file of the e-commerce website. Once located, it recursively processes the sitemap index to extract all available URLs.
 
@@ -65,7 +78,9 @@ The collected URLs went through the model created earlier and predicted product 
 
 Total product URLs: `8,24,761`
 
-The result is stored in `product_urls.json`
+The result is stored in [product_urls.json.zip](https://github.com/reverie-ss/web_crawler/blob/main/product_urls.json.zip)
+
+It took around `15 minutes` to get the product urls
 
 ## Installation
 1. Clone the repository:
