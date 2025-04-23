@@ -62,6 +62,7 @@ The crawler engine was run on three domains:
 Total URLs collected from the above three domains: `8,28,292`
 
 The collected URLs went through the model created earlier and predicted product URLS.
+
 Total product URLs: `8,24,761`
 
 The result is stored in `product_urls.json`
