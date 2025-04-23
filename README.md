@@ -51,6 +51,21 @@ False Positives: 4
 
 False negatives: 0
 ```
+
+# Product URLs
+
+The crawler engine was run on three domains:
+1. https://www.westside.com/
+2. https://virgio.com/
+3. https://www.tatacliq.com/
+
+Total URLs collected from the above three domains: `8,28,292`
+
+The collected URLs went through the model created earlier and predicted product URLS.
+Total product URLs: `8,24,761`
+
+The result is stored in `product_urls.json`
+
 ## Installation
 1. Clone the repository:
     ```bash
