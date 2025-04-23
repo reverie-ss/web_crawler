@@ -7,3 +7,4 @@ requests
 ultimate-sitemap-parser
 scikit-learn
 pandas
+xgboost

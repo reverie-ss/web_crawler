@@ -1,3 +1,0 @@
-http://username:password@proxy1.com:8000
-http://proxy2.com:8080
-https://proxy3.com:443
