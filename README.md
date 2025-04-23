@@ -1,5 +1,5 @@
 # web_crawler
- An intelligent, scalable web crawler that sniffs out product pages across e-commerce sites with speed and intelligence.
+ An intelligent, scalable web crawler that sniffs out product urls across e-commerce sites. Add list of domains and it will pull out all product pages in it.
 
 This project has the basic implementation to showcase as POC.
 
@@ -8,7 +8,7 @@ This project has the basic implementation to showcase as POC.
 ![design](https://raw.githubusercontent.com/reverie-ss/web_crawler/refs/heads/main/site_crawler.svg)
 
  There are 3 components to this project:
-1. **Crawler Engine**: The core component responsible for fetching and parsing web pages. It uses a queue-based system to manage URLs and ensures efficient crawling while respecting robots.txt rules.
+1. **Crawler Engine**: The core component responsible for fetching and parsing data. It uses a queue-based system to manage URLs and ensures efficient crawling.
 
 2. **URL Trainer**: It uses labelled dataset to develop a model which can be used to classify urls. This model adds intelligence so that it can be scaled to 100s of other websites. 
 
@@ -33,6 +33,13 @@ Instead of using a `Rule-based` approach, this project uses machine learning for
 
 The feature extraction was done using `TF-IDF` as we can generalize the classification by dividing urls into smaller parts and figuring out the frequency.
 Data from 3 different ecommerce websites was labbeled and vectorized to train using `XGBoost`. This produced a model with very accurate results.
+
+## Crawler Engine
+The Crawler Engine primarily searches for the `sitemap.xml` file of the e-commerce website. Once located, it recursively processes the sitemap index to extract all available URLs.
+
+If the `sitemap.xml` file is unavailable or inaccessible, the crawler employs browser automation using Playwright to dynamically fetch URLs.
+
+
 
 # Result
 The model was trained on a labelled dataset of 16000+ URLs.
